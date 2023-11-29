@@ -42,6 +42,7 @@ Running the executable with a [scene description file](#scene-description-file) 
 to run the executable with an input file, use the following command
 
     ./raytracer path/to/scenedescriptionfile.txt
+*note: rendering the sample scene description file will take about 50 seconds because of the high resolution of the image. So don't worry if it seems frozen :).*
 ## Scene Description File
 *see [sample scene](https://github.com/mbjenson/ray-tracer/blob/main/sample_scene/t4.txt) for a description file example. The output is displayed [above](#sample-scene) or can be viewed [here](https://github.com/mbjenson/ray-tracer/blob/main/sample_scene/t4.jpg)*
 ### Settup
