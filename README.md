@@ -120,4 +120,7 @@ faces with both texture coordinates and vertex normals
 
     'f [v1]/[vt1]/[vn1] [v2]/[vt2]/[vn2] [v3]/[vt3]/[vn3]
 ## Program Structure
-The code is well documented and should be
+The header files contain general documentation and information about specific implementation can be found in the cpp files.
+
+## Mathematics
+Lighting is calculated with an extended version of the blinn-phong illumination equation.
