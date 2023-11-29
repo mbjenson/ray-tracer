@@ -10,6 +10,7 @@ Ray tracer scene renderer created entirely with C++
 4. [**Build Instructions**](#build)
 5. [**Scene Description File**](#scene-description-file)
 6. [**Program Structure**](#program-structure)
+7. [**Mathematics**](#mathematics)
 
 ## Legend
 
