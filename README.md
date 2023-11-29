@@ -3,11 +3,18 @@
 Ray tracer scene renderer created entirely with C++
 
 ## Contents
-1. [**Sample Scene**](#sample-scene)
-2. [**Capabilities**](#capabilities)
-3. [**Build Instructions**](#build)
-4. [**Scene Description File**](#scene-description-file)
-5. [**Program Structure**](#program-structure)
+
+1. [**Legend**](#legend)
+2. [**Sample Scene**](#sample-scene)
+3. [**Capabilities**](#capabilities)
+4. [**Build Instructions**](#build)
+5. [**Scene Description File**](#scene-description-file)
+6. [**Program Structure**](#program-structure)
+
+## Legend
+
+* '[]' brackets specify a user defined value. for example 'sphere [x] [y] [z] [r]' could be written as 'sphere 2.5 1 5.0 1' in practice.
+
 
 ## Sample scene
 ![](sample_scene/t4.jpg)
@@ -20,7 +27,7 @@ Ray tracer scene renderer created entirely with C++
 * textured objects
 
 ## Build
-*Note: uses g++ compiler and c++11*
+*Note: uses g++ for compilation and written in c++11*
 
 #### Clone the repository
 
@@ -30,7 +37,8 @@ compiled binary executable located in the project's home directory
     
     make
 #### Run
-Run executable with a [scene description file](#scene-description-file) to render the scene to an ascii ppm file
+Running the executable with a [scene description file](#scene-description-file) will create an ascii ppm (.ppm) containing the rendered image under the same basename as the input file. The output file is located in the same directory as the input file. If a ppm file with that name already exists there, it will be overridden.
+to run the executable with an input file, use the following command
 
     ./raytracer path/to/scenedescriptionfile.txt
 ## Scene Description File
@@ -53,14 +61,20 @@ Every scene file needs to include the following information to settup the scene:
 **vertical field of view**: positive float
 
     'vfov [x]'
-**background scene color**: the color drawn as the background
+**background scene color**: 4D positive floats
 
     'bkgcol [r] [g] [b] [η]'
 where the η (eta) allows the user to specify a density-surround that the camera is emerssed in. (eg. water)
 
-### Shapes, Materials, and Lights
+### Shapes, Materials, Lights, and Textures
+
+**Textures**
+The textures used in the ray tracer must be in ascii ppm format and are declared as follows
+
+    'texture path/to/texture.ppm file'
 
 **Materials**
+objects use the last defined material they are listed under in the file.
 
         'mtlcol [r] [g] [b] [specular_r] [specular_g] [specular_b] [ambient_weight] [diffuse_weight] [specular_weight] [specular_falloff] [alpha] [index_of_refraction]'      
 * r, g, b : intrisic object color (0 to 1)
@@ -81,15 +95,29 @@ all values are floats
 
 Faces have several options and components
 
-verticies : declared in the file and, upon execution, are stored in an array.
+verticies : declared in the file and, upon execution, are stored in an array. These verticies are referenced later when defining faces. 3D float vector
 
-    'v [x_cord] [y_cord] [z_cord]'
+    'v [x] [y] [z]'
+vertex normals : a vertex can have a corresponding normal direction associated with it. this allows for smoothly shaded triangles. 3D float vector
+
+    'vn [x] [y] [z]'
+texture coordinates : a vertex can have a corresponding texture coordinate assocated with it which corresponds to where a texture is positioned in reference to that vertex. values (0 - 1)
+
+    'vt [u] [v]'
 
 faces : combination of 3 verticies which have been previously declared in the file. vertices are references in order of declaration in the file starting at 1.
 
+    
     'f [v1] [v2] [v3]'
 
-WIP left off at defining using vertex normals and texture coordinates in face defnitiions
-    
+faces with vertex normals : include a vertex normal for every vertex
 
+    'f [v1]//[vn1] [v2]//[vn2] [v3]//[vn3]
+faces with texture coordinates : include a texture coordinate for each vertex
+
+    'f [v1]/[vt1] [v2]/[vt2] [v3]/[vt3]
+faces with both texture coordinates and vertex normals
+
+    'f [v1]/[vt1]/[vn1] [v2]/[vt2]/[vn2] [v3]/[vt3]/[vn3]
 ## Program Structure
+The code is well documented and should be
