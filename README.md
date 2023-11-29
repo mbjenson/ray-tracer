@@ -87,6 +87,14 @@ objects use the last defined material they are listed under in the file.
 * alpha : controls the transparency of the material (0 to 1)
 * index_of_refraction : how much a ray is bent upon entry into the object (> 0)
 
+**Lights**
+The program supports both directional and point lights
+
+    'light [x] [y] [z] [light_type] [r] [g] [b]'
+* light_type : 0 = directional light, 1 = point light
+* x, y, z : 3D float vector defining light position for point lights and light direction for directional lights
+* r, g, b : light color
+
 **Spheres**
 
     'sphere [x_center] [y_center] [z_center] [radius]'
