@@ -122,13 +122,13 @@ faces : combination of 3 verticies which have been previously declared in the fi
 
 faces with vertex normals : include a vertex normal for every vertex
 
-    'f [v1]//[vn1] [v2]//[vn2] [v3]//[vn3]
+    'f [v1]//[vn1] [v2]//[vn2] [v3]//[vn3]'
 faces with texture coordinates : include a texture coordinate for each vertex
 
-    'f [v1]/[vt1] [v2]/[vt2] [v3]/[vt3]
+    'f [v1]/[vt1] [v2]/[vt2] [v3]/[vt3]'
 faces with both texture coordinates and vertex normals
 
-    'f [v1]/[vt1]/[vn1] [v2]/[vt2]/[vn2] [v3]/[vt3]/[vn3]
+    'f [v1]/[vt1]/[vn1] [v2]/[vt2]/[vn2] [v3]/[vt3]/[vn3]'
 ## Program Structure
 The header files contain extensive documentation. More specific implementation documentation can be found in the cpp files.
 
