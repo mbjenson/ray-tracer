@@ -14,7 +14,7 @@ Ray tracer scene renderer created entirely with C++
 
 ## Legend
 
-* '[]' brackets specify a user defined value. for example 'sphere [x] [y] [z] [r]' could be written as 'sphere 2.5 1 5.0 1' in practice.
+* '[]' brackets specify a user defined value. for example 'sphere [x] [y] [z] [r]' could be written as 'sphere 2.5 1.0 5.0 1.0' in practice.
 
 
 ## Sample scene
