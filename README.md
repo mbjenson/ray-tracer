@@ -2,7 +2,6 @@
 
 Ray tracer scene renderer created entirely with C++
 * *designed for unix-like operating systems*
-* *written in c++11*
 * *uses g++ compiler*
 ## Contents
 
