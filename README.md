@@ -29,7 +29,7 @@ Ray tracer scene renderer created entirely with C++
 
     git clone https://github.com/mbjenson/ray-tracer.git
 #### compile
-compiled binary executable located in the project's home directory
+navigate to the directory containing the project makefile and run the following command. The compiled binary executable will be located in the project's home directory
     
     make
 #### Run
