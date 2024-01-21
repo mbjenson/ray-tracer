@@ -41,7 +41,7 @@ To run the executable with an input file, use the following command
 *note: rendering the sample scene description file will take between 10 and 30 seconds (depending on your CPU speed) because of the high resolution of the image. So don't worry if it seems frozen :).*
 
 ## Viewing the output
-Ascii ppm is not a typical image format and as a result, requires additional software to be viewed. I recommend using GIMP (GNU image manipulation program) which is a free and open source image editor like photo-shop. GIMP can be installed from the [GIMP website](https://www.gimp.org/) or downloaded from a linux terminal using
+Ascii ppm is not a typical image format and as a result, requires additional software to be viewed. I recommend using GIMP (GNU image manipulation program) which is a free and open source image editor and behaves very similarly to Photoshop. GIMP can be installed from the [GIMP website](https://www.gimp.org/) or downloaded from a linux terminal using
 
     sudo apt install gimp
 ## Scene Description File
