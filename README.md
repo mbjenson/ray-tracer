@@ -1,8 +1,7 @@
 # ray-tracer
 
 Ray tracer scene renderer created entirely with C++
-* *designed for unix-like operating systems*
-* *uses g++ compiler*
+
 ## Contents
 
 1. [**Sample Scene**](#sample-scene)
@@ -24,6 +23,9 @@ Ray tracer scene renderer created entirely with C++
 * textured objects
 
 ## Build
+
+* *designed for unix-like operating systems*
+* *uses g++ compiler*
 
 #### Clone the repository
 
